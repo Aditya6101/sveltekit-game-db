@@ -23,7 +23,7 @@
 	<title>Explore Games | GameDB by Aditya Kamble</title>
 </svelte:head>
 
-<div class="max-w-5xl mx-auto py-3 px-6 grid grid-cols-5 gap-11">
+<div class="max-w-5xl mx-auto py-3 px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5  gap-11">
 	{#each data as game (game.id)}
 		<GameCard {game} />
 	{/each}
