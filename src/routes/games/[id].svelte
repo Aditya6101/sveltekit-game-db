@@ -11,6 +11,8 @@
 </script>
 
 <script>
+	import { fade } from 'svelte/transition';
+
 	export let data;
 
 	// @ts-ignore
@@ -21,7 +23,7 @@
 	<title>{data.name} | GameDB by Aditya Kamble</title>
 </svelte:head>
 
-<main class="max-w-5xl mx-auto px-6 my-6">
+<main class="max-w-5xl mx-auto px-6 my-6" transition:fade={{ delay: 250, duration: 300 }}>
 	<img class="rounded-md" src={data.background_image} alt={data.name} />
 	<div class="my-4 flex items-center justify-between">
 		<h2 class="font-bold text-xl">{data.name}</h2>

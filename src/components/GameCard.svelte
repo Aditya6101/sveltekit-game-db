@@ -1,8 +1,9 @@
 <script>
+	import { slide } from 'svelte/transition';
 	export let game;
 </script>
 
-<div class="w-36">
+<div class="w-36" in:slide={{ delay: 250, duration: 500 }}>
 	<a href={`/games/${game.id}`}>
 		<img
 			class="w-full h-52 object-cover rounded-md overflow-hidden  transition ease-in  hover:scale-105"
